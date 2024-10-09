@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import * as AuthActions from '../../../store/auth/auth.actions';
+import { AccountService } from '../../../core/services/account/acount.service';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +21,8 @@ export class LoginComponent {
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    private store: Store // Inject Store
+    private store: Store,
+    private userService: AccountService
   ) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -29,16 +31,18 @@ export class LoginComponent {
   }
 
   onSubmit() {
-    debugger;
     const email = this.loginForm.value['email'];
     const password = this.loginForm.value['password'];
-    if (email === 'admin@.com' && password === 'admin') {
-      // this.store.dispatch(
-      //   AuthActions.setAuthenticated({ isAuthenticated: true })
-      // );
-      this.router.navigate(['/user']);
-    } else {
-      this.errorMessage = 'Incorrect email or password';
-    }
+
+    this.userService.loginUser(email, password).subscribe((isAuthenticated) => {
+      if (isAuthenticated) {
+        this.store.dispatch(
+          AuthActions.setAuthenticated({ isAuthenticated: true })
+        );
+        this.router.navigate(['/user']);
+      } else {
+        this.errorMessage = 'Incorrect email or password';
+      }
+    });
   }
 }
