@@ -1,27 +1,29 @@
 # SecurePrivacy
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.10.
+## Installation and Running
 
-## Development server
+To get started with the SecurePrivacy project, follow these steps:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. **Install dependencies**:
 
-## Code scaffolding
+   - Run the following command in your terminal:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+     ```bash
+     npm install
+     ```
 
-## Build
+     Or, you can use the shorthand:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+     ```bash
+     npm i
+     ```
 
-## Running unit tests
+2. **Start the application**:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+   - Use the command below to run the application:
 
-## Running end-to-end tests
+     ```bash
+     ng serve
+     ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+   The application will be available at `http://localhost:4200/`.
