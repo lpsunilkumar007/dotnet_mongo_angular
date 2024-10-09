@@ -1,0 +1,84 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>UpworkTest</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps\package.json" />
+    <Content Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps\_metadata.json" />
+    <Content Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps_ssr\package.json" />
+    <Content Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps_ssr\_metadata.json" />
+    <Content Include="ClientApp\.vscode\extensions.json" />
+    <Content Include="ClientApp\.vscode\launch.json" />
+    <Content Include="ClientApp\.vscode\tasks.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\.tsbuildinfo" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps\%40angular_common.js" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps\%40angular_common.js.map" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps\%40angular_common_http.js" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps\%40angular_common_http.js.map" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps\%40angular_core.js" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps\%40angular_core.js.map" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps\%40angular_forms.js" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps\%40angular_forms.js.map" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps\%40angular_platform-browser.js" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps\%40angular_platform-browser.js.map" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps\%40angular_router.js" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps\%40angular_router.js.map" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps\%40ngrx_store.js" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps\%40ngrx_store.js.map" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps\chunk-7FVPPGQV.js" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps\chunk-7FVPPGQV.js.map" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps\chunk-EHL346EH.js" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps\chunk-EHL346EH.js.map" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps\chunk-F7IXS7Q2.js" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps\chunk-F7IXS7Q2.js.map" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps\chunk-K2DXAQGY.js" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps\chunk-K2DXAQGY.js.map" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps_ssr\%40angular_common.js" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps_ssr\%40angular_common.js.map" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps_ssr\%40angular_common_http.js" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps_ssr\%40angular_common_http.js.map" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps_ssr\%40angular_core.js" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps_ssr\%40angular_core.js.map" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps_ssr\%40angular_forms.js" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps_ssr\%40angular_forms.js.map" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps_ssr\%40angular_platform-browser.js" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps_ssr\%40angular_platform-browser.js.map" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps_ssr\%40angular_platform-server.js" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps_ssr\%40angular_platform-server.js.map" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps_ssr\%40angular_router.js" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps_ssr\%40angular_router.js.map" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps_ssr\%40ngrx_store.js" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps_ssr\%40ngrx_store.js.map" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps_ssr\chunk-EAFGYYQ3.js" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps_ssr\chunk-EAFGYYQ3.js.map" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps_ssr\chunk-MJCIUX4X.js" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps_ssr\chunk-MJCIUX4X.js.map" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps_ssr\chunk-NQ4HTGF6.js" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps_ssr\chunk-NQ4HTGF6.js.map" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps_ssr\chunk-PBSPOI3C.js" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps_ssr\chunk-PBSPOI3C.js.map" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps_ssr\chunk-YDN5P6SV.js" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps_ssr\chunk-YDN5P6SV.js.map" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps_ssr\xhr2-ISERFGGE.js" />
+    <None Include="ClientApp\.angular\cache\18.2.7\SecurePrivacy\vite\deps_ssr\xhr2-ISERFGGE.js.map" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
+    <PackageReference Include="MongoDB.EntityFrameworkCore" Version="8.1.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="mongodb.driver" Version="2.29.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Application\Application.csproj" />
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

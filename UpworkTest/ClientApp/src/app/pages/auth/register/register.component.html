@@ -1,0 +1,325 @@
+<div class="mb-4">
+  <div class="max-w-lg mx-auto p-4 border rounded shadow-lg">
+    <h2 class="text-2xl text-center font-bold mb-4">Register</h2>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="mb-4">
+        <label class="block text-md font-bold mb-2" for="firstName"
+          >First Name</label
+        >
+        <input
+          id="firstName"
+          formControlName="firstName"
+          class="border rounded w-full py-2 px-3"
+        />
+        <div
+          *ngIf="
+            registerForm.get('firstName')?.invalid &&
+            registerForm.get('firstName')?.touched
+          "
+          class="text-red-500 text-xs italic"
+        >
+          First Name is required.
+        </div>
+      </div>
+      <div class="mb-4">
+        <label class="block text-md font-bold mb-2" for="lastName"
+          >Last Name</label
+        >
+        <input
+          id="lastName"
+          formControlName="lastName"
+          class="border rounded w-full py-2 px-3"
+        />
+        <div
+          *ngIf="
+            registerForm.get('lastName')?.invalid &&
+            registerForm.get('lastName')?.touched
+          "
+          class="text-red-500 text-xs italic"
+        >
+          Last Name is required.
+        </div>
+      </div>
+      <div class="mb-4">
+        <label class="block text-md font-bold mb-2" for="email">Email</label>
+        <input
+          id="email"
+          formControlName="email"
+          type="email"
+          class="border rounded w-full py-2 px-3"
+        />
+        <div
+          *ngIf="
+            registerForm.get('email')?.invalid &&
+            registerForm.get('email')?.touched
+          "
+          class="text-red-500 text-xs italic"
+        >
+          Please enter a valid email.
+        </div>
+      </div>
+      <div class="mb-4">
+        <label class="block text-md font-bold mb-2" for="phone"
+          >Phone Number</label
+        >
+        <input
+          id="phone"
+          formControlName="phone"
+          class="border rounded w-full py-2 px-3"
+        />
+        <div
+          *ngIf="
+            registerForm.get('phone')?.invalid &&
+            registerForm.get('phone')?.touched
+          "
+          class="text-red-500 text-xs italic"
+        >
+          Phone number is required and should be between 10 to 12 digits.
+        </div>
+      </div>
+      <div class="mb-4">
+        <label class="inline-flex items-center">
+          <input
+            type="checkbox"
+            formControlName="isTermAndPolicyAccepted"
+            class="form-checkbox"
+            (click)="openTermsModal()"
+          />
+          <span class="ml-2">I agree to the terms & policy </span>
+        </label>
+        <div
+          *ngIf="
+            registerForm.get('isTermAndPolicyAccepted')?.invalid &&
+            registerForm.get('isTermAndPolicyAccepted')?.touched
+          "
+          class="text-red-500 text-xs italic"
+        >
+          You must agree to the terms.
+        </div>
+      </div>
+      <button
+        type="submit"
+        class="bg-blue-500 text-white py-2 px-4 rounded mt-4"
+      >
+        Register
+      </button>
+    </form>
+    <!-- Modal for Terms & Policy -->
+    <div
+      *ngIf="isModalOpen"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+    >
+      <div class="bg-white rounded-lg p-8 max-w-4xl w-full mx-4">
+        <h2 class="text-2xl font-bold mb-4">Terms & Policy</h2>
+        <p class="text-sm leading-6 overflow-auto max-h-[70vh]">
+          <strong>1. Introduction</strong>
+          <br />
+          This General Data Protection Regulation (GDPR) privacy policy outlines
+          the procedures and conditions under which (hereinafter referred to as
+          "we," "us," or "our") collects, uses, and manages personal data in
+          compliance with GDPR guidelines. Our commitment to protecting your
+          data is paramount, and we endeavor to handle all personal data with
+          utmost care, transparency, and in accordance with legal standards.
+          <br /><br />
+          This policy explains the specific terms regarding data usage, storage,
+          and the necessary user approvals required for data retention, as well
+          as the procedures in place for users who no longer wish their data to
+          be processed. By using our services, you acknowledge that you have
+          read and understood this policy.
+          <br /><br />
+          <strong>2. Data Collection and Use</strong>
+          <br />
+          We collect and process personal data in accordance with GDPR, which
+          includes the following types of information:
+          <br /><br />
+        </p>
+
+        <ul class="list-disc pl-6 space-y-2">
+          <li>
+            Personal identification data such as your name, email address,
+            contact number, etc.
+          </li>
+          <li>
+            Usage data related to how you interact with our services and
+            website.
+          </li>
+          <li>
+            Any other relevant information that may be required to deliver our
+            services effectively.
+          </li>
+        </ul>
+        <br />
+        The primary purpose for collecting your data is to provide you with
+        optimal service experiences, improved functionality, and personalized
+        communication. We use your data to:<br /><br />
+        <ul class="list-disc pl-6 space-y-2"></ul>
+        <li>Ensure the smooth operation of our services.</li>
+
+        <li>Enhance user experience and customize service offerings.</li>
+        <li>
+          Communicate with you, send updates, promotions, and service-related
+          information.
+        </li>
+        <li>
+          Analyze user behavior to further improve and develop our services.
+          <br /><br />
+          <strong>3.Data Retention Periods and User Consent </strong>
+          <strong> Initial Data Retention Period </strong>
+          <br />
+          Upon first collecting your personal data, we will retain this data for
+          a period of 30 days. After this 30-day period, we will request your
+          explicit consent to continue using your personal data. We believe in
+          respecting user autonomy, and no data will be retained beyond this
+          point unless we receive your consent. <br /><br /><strong>
+            3.2 Renewed Consent After 11 Months</strong
+          ><br />
+          If you provide consent for data retention after the initial 30-day
+          period, your data will be stored for a maximum of 11 months from the
+          date of consent.<br /><br />
+          Before this period expires, you will receive a notification requesting
+          renewed consent for the continued use of your personal data.
+          <br /><br />This process will be repeated annually, requiring users to
+          re-approve data usage every 11 months. <br /><br />If you choose not
+          to renew your consent after 11 months, we will automatically stop
+          processing your data, and it will be scheduled for deletion as
+          outlined in section 5 of this policy.<br /><br />
+          <strong>4. User Rights Under GDPR </strong><br />GDPR grants several
+          rights to users regarding their personal data.<br /><br />
+          As a user of our services, you have the following rights:
+          <ul class="list-disc pl-6 space-y-2">
+            <li></li>
+            Right to Access: You may request access to the personal data we hold
+            about you and obtain a copy of that information.
+            <li>
+              Right to Rectification: You have the right to request corrections
+              to inaccurate or incomplete data.
+            </li>
+            <li>
+              Right to Erasure (Right to Be Forgotten): You can request the
+              deletion of your personal data, as detailed in section 5.
+            </li>
+            <li>
+              Right to Restrict Processing: You may request the restriction of
+              data processing under certain circumstances.
+            </li>
+            <li>
+              Right to Data Portability: You can request your personal data in a
+              structured, commonly used, and machine-readable format.
+            </li>
+            Right to Object: You have the right to object to the processing of
+            your personal data under certain conditions.
+          </ul>
+          <br />To exercise any of these rights, please contact our Data
+          Protection Officer at [admin&#64;yourcompany.com].
+          <br /><br /><strong> 5. Data Deletion and Withdrawal</strong>
+          <br />
+          Data Deletion and Withdrawal of Consent At any point, you can request
+          that we cease processing and delete your personal data. To facilitate
+          this, we have established the following process:<br /><br />
+          <strong
+            >Contacting the Admin for Data Deletion: If you decide that you no
+            longer wish for us to retain or use your data, you can contact our
+            admin via email at [admin&#64;yourcompany.com]. <br />Please include
+            the subject line "Data Deletion Request" along with your identifying
+            information to expedite the process.<br />
+            <br />Once we receive your request, we will:
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Confirm receipt of your request within 7 working days.</li>
+              <li>
+                Automatically delete all personal data associated with your
+                account within 30 days of receiving the request.
+              </li>
+              <li>
+                Provide confirmation once the deletion has been successfully
+                completed.
+              </li>
+            </ul>
+            <br />After your data has been deleted, we will no longer process or
+            store any personal information related to you. <br />Please note
+            that once the deletion is complete, you will no longer have access
+            to your account or any associated services.<br />
+            <br />
+            If there are legal reasons that prevent us from deleting your data
+            immediately (e.g., for tax or accounting purposes), we will inform
+            you accordingly and explain the period for which the data will be
+            retained.<br /><br />
+            <strong
+              >6. Data Security We are committed to ensuring that your personal
+              data is kept secure.
+            </strong>
+            <br />We implement a variety of security measures to safeguard your
+            data from unauthorized access, disclosure, or misuse. These measures
+            include:
+            <ul class="list-disc pl-6 space-y-2">
+              <li>
+                <strong> Encryption: </strong> <br />All data is encrypted both
+                in transit and at rest to prevent unauthorized access.
+              </li>
+              <li>
+                <strong> Access Control: </strong> Only authorized personnel
+                have access to personal data, and access is granted on a
+                need-to-know basis.
+              </li>
+              <li>
+                <strong> Regular Audits:</strong><br />
+                We regularly review and update our security practices to ensure
+                compliance with industry standards and to prevent any potential
+                vulnerabilities.
+              </li>
+            </ul>
+            <br />In the event of a data breach that poses a risk to your
+            personal data, we will notify you and the relevant data protection
+            authorities within 72 hours, as required under GDPR.<br /><br /><strong>
+              7. Third-Party Data Sharing</strong
+            ><br />
+            We do not sell, trade, or otherwise transfer your personal data to
+            third parties, except under the following circumstances:
+            <ul class="list-disc pl-6 space-y-2">
+              <li>
+                <strong> Service Providers:</strong> <br />
+                We may share data with trusted service providers who assist us
+                in delivering our services. <br />These providers are bound by
+                confidentiality agreements and GDPR compliance.
+              </li>
+              <li>
+                <strong> Requirements: </strong> required by law, we may
+                disclose personal data to comply with legal obligations or to
+                protect our rights, safety, or the safety of others.
+              </li>
+            </ul>
+            <br />
+            Whenever we engage third-party service providers, we ensure that
+            they adhere to the same level of data protection and privacy
+            standards required under GDPR.<br /><br />
+            <strong> 8. Data Processing Outside the EU</strong><br />
+            In certain cases, your data may be processed or stored outside the
+            European Economic Area (EEA). In such instances, we ensure that
+            appropriate safeguards, such as the use of Standard Contractual
+            Clauses (SCCs) or Binding Corporate Rules (BCRs), are in place to
+            protect your personal data in line with GDPR requirements.
+            <br /><br /><strong>9. Policy Updates</strong> We reserve the right
+            to update this privacy policy periodically to reflect changes in our
+            practices, legal obligations, or GDPR requirements. Any updates to
+            the policy will be communicated via email or through our website.<br /><br />
+            <strong>10. Contact Information </strong>For any questions or
+            concerns regarding this privacy policy or our data practices, please
+            contact our Data Protection Officer at:<br />
+
+            <p></p>
+
+            <p>
+              <button
+                (click)="closeModal()"
+                class="mt-4 bg-red-500 text-white py-2 px-4 rounded"
+              >
+                Close
+              </button>
+            </p>
+
+            <p></p
+          ></strong>
+        </li>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+D:\Arun\WorkPlace\Dan Storbaek\SecurePrivacy\SecurePrivacy_api\Domain\bin\Debug\net8.0\Domain.deps.json
+D:\Arun\WorkPlace\Dan Storbaek\SecurePrivacy\SecurePrivacy_api\Domain\bin\Debug\net8.0\Domain.dll
+D:\Arun\WorkPlace\Dan Storbaek\SecurePrivacy\SecurePrivacy_api\Domain\bin\Debug\net8.0\Domain.pdb
+D:\Arun\WorkPlace\Dan Storbaek\SecurePrivacy\SecurePrivacy_api\Domain\bin\Debug\net8.0\Shared.dll
+D:\Arun\WorkPlace\Dan Storbaek\SecurePrivacy\SecurePrivacy_api\Domain\bin\Debug\net8.0\Shared.pdb
+D:\Arun\WorkPlace\Dan Storbaek\SecurePrivacy\SecurePrivacy_api\Domain\obj\Debug\net8.0\Domain.csproj.AssemblyReference.cache
+D:\Arun\WorkPlace\Dan Storbaek\SecurePrivacy\SecurePrivacy_api\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Arun\WorkPlace\Dan Storbaek\SecurePrivacy\SecurePrivacy_api\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+D:\Arun\WorkPlace\Dan Storbaek\SecurePrivacy\SecurePrivacy_api\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+D:\Arun\WorkPlace\Dan Storbaek\SecurePrivacy\SecurePrivacy_api\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+D:\Arun\WorkPlace\Dan Storbaek\SecurePrivacy\SecurePrivacy_api\Domain\obj\Debug\net8.0\Domain.csproj.Up2Date
+D:\Arun\WorkPlace\Dan Storbaek\SecurePrivacy\SecurePrivacy_api\Domain\obj\Debug\net8.0\Domain.dll
+D:\Arun\WorkPlace\Dan Storbaek\SecurePrivacy\SecurePrivacy_api\Domain\obj\Debug\net8.0\refint\Domain.dll
+D:\Arun\WorkPlace\Dan Storbaek\SecurePrivacy\SecurePrivacy_api\Domain\obj\Debug\net8.0\Domain.pdb
+D:\Arun\WorkPlace\Dan Storbaek\SecurePrivacy\SecurePrivacy_api\Domain\obj\Debug\net8.0\ref\Domain.dll
