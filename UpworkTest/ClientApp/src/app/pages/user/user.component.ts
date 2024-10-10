@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  FormsModule,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
@@ -18,11 +24,12 @@ import {
   selectUserError,
 } from '../../store/user/user.selectors';
 import { UserDataAccessService } from '../../core/services/user-data-access/user-data-access.service';
-
+import * as AuthActions from '../../store/auth/auth.actions';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-user',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css'],
 })
@@ -30,7 +37,7 @@ export class UserComponent implements OnInit {
   users$: Observable<User[]> = this.store.pipe(select(selectAllUsers));
   loading$: Observable<boolean> = this.store.pipe(select(selectUserLoading));
   error$: Observable<string | null> = this.store.pipe(select(selectUserError));
-
+  userForm: FormGroup;
   showModal = false;
   newUser: User = {
     id: '',
@@ -40,7 +47,7 @@ export class UserComponent implements OnInit {
     mobileNumber: '',
     remainingDays: 0,
     isRequestedToDelete: false,
-    isDeleted:false
+    isDeleted: false,
   };
   newUserMarkedForDelete: User = {
     id: '',
@@ -50,7 +57,7 @@ export class UserComponent implements OnInit {
     mobileNumber: '',
     remainingDays: 0,
     isRequestedToDelete: false,
-    isDeleted:false
+    isDeleted: false,
   };
   isEditing = false;
   showConfirmModal = false;
@@ -59,8 +66,17 @@ export class UserComponent implements OnInit {
 
   constructor(
     private store: Store,
-    private userDataAccess: UserDataAccessService
-  ) {}
+    private router: Router,
+    private fb: FormBuilder
+  ) {
+    this.userForm = this.fb.group({
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      phone: ['', [Validators.required, Validators.pattern('^[0-9]{10,12}$')]],
+      isTermAndPolicyAccepted: [false, Validators.requiredTrue],
+    });
+  }
 
   ngOnInit() {
     this.store.dispatch(fetchUsers());
@@ -80,6 +96,7 @@ export class UserComponent implements OnInit {
   }
 
   closeModal() {
+    debugger;
     this.showModal = false;
     this.resetForm();
   }
@@ -93,23 +110,41 @@ export class UserComponent implements OnInit {
       mobileNumber: '',
       remainingDays: 0,
       isRequestedToDelete: false,
-      isDeleted:false
+      isDeleted: false,
     };
     this.isEditing = false;
   }
-
+  logout() {
+    localStorage.setItem('isAuthenticated', 'false');
+    this.store.dispatch(
+      AuthActions.setAuthenticated({ isAuthenticated: false })
+    );
+    this.router.navigate(['/login']).then(() => {
+      window.location.reload();
+    });
+  }
   onSubmit() {
+    debugger;
+    if (this.userForm.invalid) {
+      // Mark all controls as touched to trigger validation messages
+      Object.keys(this.userForm.controls).forEach((field) => {
+        const control = this.userForm.controls[field];
+        control.markAsTouched({ onlySelf: true });
+      });
+      return; // Stop submission if the form is invalid
+    }
+
     if (this.isEditing) {
       this.store.dispatch(updateUser({ user: this.newUser }));
     } else {
       this.store.dispatch(createUser({ user: this.newUser }));
     }
- 
-    // Add a delay of 1 second (1000 milliseconds) before fetching users
+
+    // Add a delay of 1 second before fetching users
     setTimeout(() => {
       this.store.dispatch(fetchUsers());
-    }, 1000); // Change the delay time as needed
- 
+    }, 1000);
+
     this.closeModal();
   }
 
@@ -121,7 +156,7 @@ export class UserComponent implements OnInit {
     this.store.dispatch(deleteUserData({ user: this.newUserMarkedForDelete }));
     setTimeout(() => {
       this.store.dispatch(fetchUsers());
-    }, 1000); 
+    }, 1000);
     this.isOpenConfirmation = false;
   }
 
