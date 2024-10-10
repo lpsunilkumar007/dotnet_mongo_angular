@@ -85,7 +85,7 @@ namespace UpworkTest.Controllers
             {
                 return "Id not found";
             }            
-            await _userSerivceData.DeleteAsync(userId);
+            await _userSerivceData.SoftDeleteAsync(userId);
             return "Deleted successfully!!";
         }
     }

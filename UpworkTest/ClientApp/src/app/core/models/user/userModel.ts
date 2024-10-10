@@ -6,4 +6,5 @@ export interface User {
   mobileNumber: string;
   remainingDays: number;
   isRequestedToDelete:boolean;
+  isDeleted:boolean;
 }
