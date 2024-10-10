@@ -25,7 +25,7 @@ export class LoginComponent {
     private userService: AccountService
   ) {
     this.loginForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required]],
       password: ['', [Validators.required]],
     });
   }
@@ -33,7 +33,13 @@ export class LoginComponent {
   onSubmit() {
     const email = this.loginForm.value['email'];
     const password = this.loginForm.value['password'];
-
+    if (this.loginForm.invalid) {
+      Object.keys(this.loginForm.controls).forEach((field) => {
+        const control = this.loginForm.controls[field];
+        control.markAsTouched({ onlySelf: true });
+      });
+      return;
+    }
     this.userService.loginUser(email, password).subscribe((isAuthenticated) => {
       if (isAuthenticated) {
         this.store.dispatch(

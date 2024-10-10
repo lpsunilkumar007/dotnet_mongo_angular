@@ -94,6 +94,15 @@ export class UserComponent implements OnInit {
     if (user) {
       this.isEditing = true;
       this.newUser = { ...user };
+      this.userForm.patchValue({
+        firstName: user.firstName,
+        lastName: user.lastName,
+        email: user.email,
+        mobileNumber: user.mobileNumber,
+        remainingDays: user.remainingDays,
+        isRequestedToDelete: user.isRequestedToDelete,
+        isDeleted: user.isDeleted,
+      });
     } else {
       this.isEditing = false;
       this.resetForm();
