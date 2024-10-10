@@ -73,8 +73,14 @@ export class UserComponent implements OnInit {
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      phone: ['', [Validators.required, Validators.pattern('^[0-9]{10,12}$')]],
-      isTermAndPolicyAccepted: [false, Validators.requiredTrue],
+      mobileNumber: [
+        '',
+        [Validators.required, Validators.pattern('^[0-9]{10,12}$')],
+      ],
+      remainingDays: [0, Validators.nullValidator],
+      id: ['', Validators.nullValidator],
+      isRequestedToDelete: [false, Validators.nullValidator],
+      isDeleted: [false, Validators.nullValidator],
     });
   }
 
@@ -96,7 +102,6 @@ export class UserComponent implements OnInit {
   }
 
   closeModal() {
-    debugger;
     this.showModal = false;
     this.resetForm();
   }
@@ -124,23 +129,20 @@ export class UserComponent implements OnInit {
     });
   }
   onSubmit() {
-    debugger;
     if (this.userForm.invalid) {
-      // Mark all controls as touched to trigger validation messages
       Object.keys(this.userForm.controls).forEach((field) => {
         const control = this.userForm.controls[field];
         control.markAsTouched({ onlySelf: true });
       });
-      return; // Stop submission if the form is invalid
+      return;
     }
-
+    const registerData: User = this.userForm.value;
     if (this.isEditing) {
       this.store.dispatch(updateUser({ user: this.newUser }));
     } else {
-      this.store.dispatch(createUser({ user: this.newUser }));
+      this.store.dispatch(createUser({ user: registerData }));
     }
-
-    // Add a delay of 1 second before fetching users
+    this.userForm.reset();
     setTimeout(() => {
       this.store.dispatch(fetchUsers());
     }, 1000);

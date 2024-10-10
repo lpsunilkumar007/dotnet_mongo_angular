@@ -36,6 +36,9 @@ For UI application please open the folder in UpworkTest/ClientApp
      ```
    The application will be available at `http://localhost:4200/`.
 
+   Email : admin@.com
+   Password : admin
+
 ## Getting to know the task
 1. **Task 1**:
 In Task 1 I have completed the below functionalities
