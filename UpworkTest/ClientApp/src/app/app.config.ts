@@ -10,24 +10,28 @@ import { authReducer } from './store/auth/auth.reducer';
 import { provideHttpClient } from '@angular/common/http';
 import { provideEffects } from '@ngrx/effects';
 import { UserEffects } from './store/user/user.effects';
+import { provideAnimations } from '@angular/platform-browser/animations';
+import { provideToastr } from 'ngx-toastr'; // Import provideToastr
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-import
-{
-FontAwesomeModule
-}
-from
-'@fortawesome/angular-fontawesome'
-;
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
     provideClientHydration(),
     provideHttpClient(),
+    provideAnimations(),
     provideStore({
       user: userReducer,
       auth: authReducer,
     }),
     FontAwesomeModule,
-    provideEffects([UserEffects])
+    provideEffects([UserEffects]),
+    provideToastr({
+      // Configure Toastr
+      positionClass: 'toast-top-right',
+      timeOut: 3000,
+      preventDuplicates: true,
+      progressBar: true,
+    }),
   ],
 };

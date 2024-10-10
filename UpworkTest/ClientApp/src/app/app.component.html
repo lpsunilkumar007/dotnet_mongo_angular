@@ -176,18 +176,12 @@
     }
   }
 </style>
-
+<app-navbar *ngIf="isAuthenticated"></app-navbar>
 <main class="main">
   <div class="content"></div>
-  <div *ngIf="isAuthenticated">
-    <button
-      (click)="logout()"
-      class="absolute top-4 right-4 bg-red-500 text-white py-2 px-4 rounded"
-    >
-    <i class="fas fa-sign-out"></i> Logout
-    </button>
-  </div>
 </main>
+
+<router-outlet></router-outlet>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
@@ -196,5 +190,4 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
 <router-outlet />

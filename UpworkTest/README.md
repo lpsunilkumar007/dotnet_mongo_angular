@@ -1,55 +1,61 @@
-![MongoDB and C# logo](./images/banner.png)
-
 ## Introduction
-Welcome to this MongoDB and ASP.Net Core Web API sample project. 
-The aim of this project is to give you a working example of how you can use the power of MongoDB Atlas and .NET to create modern applications.
-This project is intended to be a companion project to the article [How to use MongoDB Atlas with .NET/.NET Core](https://www.mongodb.com/languages/how-to-use-mongodb-with-dotnet) from the MongoDB website.
+Welcome to this application
+
+In this project we have following functionality
+- Login & Logout basic functionality with static data
+- User Register
+- User Add,Edit,Get operations
+- User can update data access
+- Secure routing
+- Redux
+- Background job
+
+For Backend we are using  .Net Core 8 Web API
+For Database we are using Mongo DB
+For UI we are using Angular 18
+
 
 ## Getting Started
 
-1. Clone this repo to your local machine
-2. Open the project in your IDE of choice
-3. Edit appsettings.json and appsettings.Development.json and  update the ConnectionString field with your connection string from the 'Connect' button for your cluster in the [Atlas UI](https://cloud.mongodb.com) 
-4. Run the project to allow you access to the endpoints for all CRUD operations.
+For UI application please open the folder in UpworkTest/ClientApp
+1. **Install dependencies**:
 
-## Getting to know the code
+   - Run the following command in your terminal:
+     ```bash
+     npm install
+     ```
+     Or, you can use the shorthand:
 
-The below diagram shows the overall architecture of the application and the following sections will explain the code more.
+     ```bash
+     npm i
+     ```
+2. **Start the application**:
+   - Use the command below to run the application:
+     ```bash
+     ng serve
+     ```
+   The application will be available at `http://localhost:4200/`.
 
-![Architecture diagram for the Web API with MongoDB](./images/architecture.jpeg)
+## Getting to know the task
+1. **Task 1**:
+In Task 1 I have completed the below functionalities
 
-### Controllers
+●	Functionality: Effective Create and Read operations.
+●	Front-End Implementation: Quality of the Angular interface and its interaction with the back-end.
+●	Back-End Design: Efficiency of .NET/C# code and API design.
+●	MongoDB Usage: Basic integration for data operations and use of indexes.
+●	Code Quality: Readability, organization, and documentation.
+●	GDPR Awareness: Implementation and description of GDPR considerations in code and user interface.
 
-The UsersController.cs class is where the routes/endpoints for the api are defined. 
+You need to run the UpworkTest as startup project for testing the above features
 
-Each endpoint calls to a method in the UsersService.cs class.
+1. **Task 2**:
+In Task 2 I have completed below
 
-### Services
 
-The UsersService.cs class contains the code that uses the MongoDB.Driver NuGet package to carry out CRUD operations against your Cluster.
+1.	The function accepts a binary string as input.
+2.	Check if the binary string is 'good' based on these conditions:
+●	Equal number of 0's and 1's.
+●	For every prefix, the number of 1's is not less than the number of 0's.
 
-### Models
-
-The Game.cs class acts as a model you can use throughout the project and the properties in it, map to the fields in the MongoDB document.
-
-UsersDatabaseSettings.cs contains an interface and implementation that maps to the UsersDatabaseSettings section in appsettings.json and appsettings.Development.json. In this application, the connection string to your cluster is stored here, but normally in production, you would combine this with [user secrets](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-5.0&tabs=windows).
-
-### Project Root
-
-At the root of the project is the usual files that come out of the box with an ASP.NET Core Web API project. 
-
-The only file with changes made here is the Startup.cs class. Inside the ConfigureServices method, the appsettings code is pulled in and the Database settings and Users Service are added to dependency injection for use in other classes.
-
-## Running the code
-
-If your IDE supports it, you can go ahead and run the application from inside the IDE.
-
-If you prefer to run it from your terminal/command-line, you can use ``` dotnet run ```.
-
-## More information
-
-If you want more information about MongoDB and Atlas, the powerful cloud-based database solution, you can view [the documentation](https://docs.atlas.mongodb.com/).
-
-## Disclaimer 
-
-Use at your own risk; not a supported MongoDB product 
+You need to run the BinaryStringEvaluator as startup project for testing the above features
