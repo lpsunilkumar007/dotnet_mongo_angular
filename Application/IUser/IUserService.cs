@@ -10,7 +10,7 @@ namespace Application.IUser
         Task<UsersDTO?> GetIdAsync(string id);
         Task<string> AddAsync(UsersDTO newUser);
         Task<string> EditAsync(UsersDTO updatedUser);
-        Task DeleteAsync(string userToDelete);
+        Task SoftDeleteAsync(string userToDelete);
         #endregion
     }
 }

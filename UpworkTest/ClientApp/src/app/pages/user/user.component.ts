@@ -39,7 +39,8 @@ export class UserComponent implements OnInit {
     email: '',
     mobileNumber: '',
     remainingDays: 0,
-    isRequestedToDelete: false
+    isRequestedToDelete: false,
+    isDeleted:false
   };
   newUserMarkedForDelete: User = {
     id: '',
@@ -48,7 +49,8 @@ export class UserComponent implements OnInit {
     email: '',
     mobileNumber: '',
     remainingDays: 0,
-    isRequestedToDelete: false
+    isRequestedToDelete: false,
+    isDeleted:false
   };
   isEditing = false;
   showConfirmModal = false;
@@ -90,7 +92,8 @@ export class UserComponent implements OnInit {
       email: '',
       mobileNumber: '',
       remainingDays: 0,
-      isRequestedToDelete: false
+      isRequestedToDelete: false,
+      isDeleted:false
     };
     this.isEditing = false;
   }

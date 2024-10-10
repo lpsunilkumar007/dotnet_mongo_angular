@@ -45,13 +45,14 @@ namespace Infrastructure.Services
         /// <param name="userToDelete"></param>
         /// <returns></returns>
         /// <exception cref="ArgumentException"></exception>
-        public async Task DeleteAsync(string userToDelete)
+        public async Task SoftDeleteAsync(string userToDelete)
         {
             var reservationToDelete = await _users.Users.FirstOrDefaultAsync(b => b.Id == userToDelete);
 
             if (reservationToDelete != null)
-            {
-                _users.Users.Remove(reservationToDelete);
+            {               
+                reservationToDelete.IsDeleted = true;
+                _users.Users.Update(reservationToDelete);
                 await _users.SaveChangesAsync();
             }
             else
@@ -92,13 +93,14 @@ namespace Infrastructure.Services
         /// <returns></returns>
         public async Task<List<UsersDTO>> GetAllAsync()
         {
-            var users = await _users.Users.OrderBy(c => c.FirstName).AsNoTracking().Select(x => new UsersDTO
+            var users = await _users.Users.Where(x => x.IsDeleted == false).OrderBy(c => c.FirstName).AsNoTracking().Select(x => new UsersDTO
             {
                 Email = x.Email,
                 FirstName = x.FirstName,
                 LastName = x.LastName,
                 MobileNumber = x.MobileNumber,
-                Id = x.Id
+                Id = x.Id,
+                IsDeleted = x.IsDeleted
             }).ToListAsync();
             return users;
         }

@@ -10,6 +10,7 @@
         public string MobileNumber { get; set; }
         public int RemainingDays { get; set; }
         public bool IsRequestedToDelete { get; set; }
+        public bool IsDeleted { get; set; }
         #endregion
     }
 }
