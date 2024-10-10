@@ -8,6 +8,9 @@ import {
 import { CommonModule } from '@angular/common';
 import { AccountService } from '../../../core/services/account/acount.service';
 import { RegisterViewModel } from '../../../core/models/account/registerViewModel';
+import { MessageHelper } from '../../../shared/messageHelper/messgae.helper';
+import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -20,7 +23,12 @@ export class RegisterComponent {
   registerForm: FormGroup;
   isModalOpen = false;
 
-  constructor(private fb: FormBuilder, private userService: AccountService) {
+  constructor(
+    private fb: FormBuilder,
+    private userService: AccountService,
+    private messgaeHelper: MessageHelper,
+    private router: Router
+  ) {
     this.registerForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
@@ -37,7 +45,8 @@ export class RegisterComponent {
       const registerData: RegisterViewModel = this.registerForm.value;
       this.userService.registerUser(registerData).subscribe(
         (user) => {
-          console.log('User created successfully:', user);
+          this.messgaeHelper.success('User created successfully');
+          this.router.navigate(['/login']);
         },
         (error) => {
           console.error('Error creating user:', error);
