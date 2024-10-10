@@ -26,6 +26,7 @@ import {
 import { UserDataAccessService } from '../../core/services/user-data-access/user-data-access.service';
 import * as AuthActions from '../../store/auth/auth.actions';
 import { Router } from '@angular/router';
+import { faL } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-user',
   standalone: true,
@@ -77,10 +78,10 @@ export class UserComponent implements OnInit {
         '',
         [Validators.required, Validators.pattern('^[0-9]{10,12}$')],
       ],
-      remainingDays: [0, Validators.nullValidator],
-      id: ['', Validators.nullValidator],
-      isRequestedToDelete: [false, Validators.nullValidator],
-      isDeleted: [false, Validators.nullValidator],
+      // remainingDays: [0, Validators.nullValidator],
+      id: [null, Validators.nullValidator],
+      // isRequestedToDelete: [false, Validators.nullValidator],
+      // isDeleted: [false, Validators.nullValidator],
     });
   }
 
@@ -128,6 +129,18 @@ export class UserComponent implements OnInit {
       isDeleted: false,
     };
     this.isEditing = false;
+    this.userForm.patchValue({
+      id: '',
+      firstName: '',
+      lastName: '',
+      email: '',
+      mobileNumber: '',
+      remainingDays: 0,
+      isRequestedToDelete: false,
+      isDeleted: false,
+    });
+    this.userForm.markAsPristine();
+    this.userForm.markAsUntouched();
   }
   logout() {
     localStorage.setItem('isAuthenticated', 'false');
@@ -147,6 +160,7 @@ export class UserComponent implements OnInit {
       return;
     }
     const registerData: User = this.userForm.value;
+    debugger;
     if (this.isEditing) {
       this.store.dispatch(updateUser({ user: registerData }));
     } else {
@@ -184,6 +198,7 @@ export class UserComponent implements OnInit {
     if (this.userToDelete) {
       this.store.dispatch(deleteUser({ userId: this.userToDelete }));
       this.closeConfirmModal();
+      this.resetForm();
     }
   }
 
