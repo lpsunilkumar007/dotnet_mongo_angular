@@ -95,6 +95,7 @@ export class UserComponent implements OnInit {
       this.isEditing = true;
       this.newUser = { ...user };
       this.userForm.patchValue({
+        id: user.id,
         firstName: user.firstName,
         lastName: user.lastName,
         email: user.email,
@@ -147,7 +148,7 @@ export class UserComponent implements OnInit {
     }
     const registerData: User = this.userForm.value;
     if (this.isEditing) {
-      this.store.dispatch(updateUser({ user: this.newUser }));
+      this.store.dispatch(updateUser({ user: registerData }));
     } else {
       this.store.dispatch(createUser({ user: registerData }));
     }
