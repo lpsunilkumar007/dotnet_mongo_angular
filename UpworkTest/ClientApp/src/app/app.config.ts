@@ -11,6 +11,13 @@ import { provideHttpClient } from '@angular/common/http';
 import { provideEffects } from '@ngrx/effects';
 import { UserEffects } from './store/user/user.effects';
 
+import
+{
+FontAwesomeModule
+}
+from
+'@fortawesome/angular-fontawesome'
+;
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
@@ -20,6 +27,7 @@ export const appConfig: ApplicationConfig = {
       user: userReducer,
       auth: authReducer,
     }),
-    provideEffects([UserEffects]),
+    FontAwesomeModule,
+    provideEffects([UserEffects])
   ],
 };

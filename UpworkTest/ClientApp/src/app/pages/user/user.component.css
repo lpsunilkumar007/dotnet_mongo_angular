@@ -1,0 +1,16 @@
+.text-white-custom {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.py-2-custom {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.px-4-custom {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.rounded-custom {
+    border-radius: 0.25rem;
+}

@@ -25,7 +25,7 @@ namespace Infrastructure.WorkerBackgroundService
                     {
                         IUserDataAccessService scopedProcessingService =
                             scope.ServiceProvider.GetRequiredService<IUserDataAccessService>();
-                        var result = await scopedProcessingService.RemoveConsentedUserData(stoppingToken);
+                        var result = await scopedProcessingService.RemoveConsentedUserData(stoppingToken); // Remove Consented User Data
                         if(result)
                         {
                             _logger.LogInformation("Database operation completed successfully at: {time}", DateTimeOffset.Now);

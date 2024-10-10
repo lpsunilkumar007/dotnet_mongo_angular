@@ -2,12 +2,13 @@
   <div class="overflow-hidden rounded-lg border border-gray-200 shadow-md m-5">
     <div class="bg-gray-50 px-6 py-4 flex justify-between items-center">
       <h2 class="font-medium text-gray-900">User List</h2>
+      
       <button
         (click)="openModal(null)"
         type="button"
         class="bg-blue-500 text-white py-2 px-4 rounded"
       >
-        Add User
+      <i class="fa-solid fa-plus"></i> Add User
       </button>
     </div>
     <table
@@ -26,10 +27,10 @@
             Phone Number
           </th>
           <th scope="col" class="px-6 py-4 font-medium text-gray-900">
-            Remaining Days
+            Retention period
           </th>
           <th scope="col" class="px-6 py-4 font-medium text-gray-900">
-            Mark For Delete
+            Delete request
           </th>
           <th scope="col" class="px-6 py-4 font-medium text-gray-900"></th>
         </tr>
@@ -53,12 +54,13 @@
           <td class="px-6 py-4">
             <button
               (click)="confirmConsentToDelete(user)"
-              id="lastName_{{ user.id }}"
+              id="isRequestedToDelete_{{ user.id }}"
               name="isRequestedToDelete_{{ user.id }}"
-              class="bg-blue-500 text-white py-2 px-4 rounded"
+              [disabled]="user.isRequestedToDelete"
+              [ngClass]="{'bg-blue-500 text-white-custom py-2-custom px-4-custom rounded-custom':!user.isRequestedToDelete, 'bg-gray-500 disabled text-white py-2 px-4 rounded':user.isRequestedToDelete}"              
             >
-              Mark For Delete
-            </button>
+            <i class="fa-solid fa-user-minus"></i> Raise Delete Request
+                      </button>
           </td>
           <td class="px-6 py-4">
             <div class="flex justify-end gap-4">
@@ -205,13 +207,15 @@
             (click)="closeModal()"
             class="bg-gray-500 text-white py-2 px-4 rounded mr-2"
           >
-            Cancel
+          <i class="fas fa-window-close"></i>  Cancel
           </button>
           <button
             type="submit"
             [disabled]="userForm.invalid"
             class="bg-blue-500 text-white py-2 px-4 rounded"
           >
+            <i class="fas fa-edit" *ngIf="isEditing"></i>    
+            <i class="fa-solid fa-plus" *ngIf="!isEditing"></i>    
             {{ isEditing ? "Update" : "Create" }}
           </button>
         </div>
@@ -233,14 +237,14 @@
         (click)="closeConfirmModal()"
         class="bg-gray-500 text-white py-2 px-4 rounded mr-2"
       >
-        Cancel
+      <i class="fas fa-window-close"></i> Cancel
       </button>
       <button
         type="button"
         (click)="deleteConfirmed()"
         class="bg-red-500 text-white py-2 px-4 rounded"
       >
-        Delete
+      <i class="fa-solid fa-trash"></i>Delete
       </button>
     </div>
   </div>
@@ -258,13 +262,13 @@
       (click)="closeConsentModal()"
       class="bg-red-500 text-white px-4 py-2 rounded mr-2"
     >
-      Close
+    <i class="fas fa-window-close"></i> Close
     </button>
     <button
       (click)="markForDelete()"
       class="bg-blue-500 text-white py-2 px-4 rounded"
     >
-      Mark For Delete
+    <i class="fa-solid fa-check"></i> Mark For Delete
     </button>
   </div>
 </div>

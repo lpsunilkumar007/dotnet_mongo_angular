@@ -6,6 +6,9 @@ using MongoDB.EntityFrameworkCore.Extensions;
 
 namespace Infrastructure.Persistence.Context
 {
+    /// <summary>
+    /// App Db Context
+    /// </summary>
     public class ApplicationDbContext : DbContext
     {
         public DbSet<Users> Users { get; init; }

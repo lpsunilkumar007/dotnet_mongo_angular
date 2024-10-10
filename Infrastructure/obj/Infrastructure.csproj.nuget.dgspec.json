@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Mongo\\dotnet_mongo_angular\\Infrastructure\\Infrastructure.csproj": {}
+    "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "D:\\Mongo\\dotnet_mongo_angular\\Application\\Application.csproj": {
+    "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Mongo\\dotnet_mongo_angular\\Application\\Application.csproj",
+        "projectUniqueName": "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "D:\\Mongo\\dotnet_mongo_angular\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "D:\\Mongo\\dotnet_mongo_angular\\Application\\obj\\",
+        "projectPath": "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,11 +29,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Mongo\\dotnet_mongo_angular\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\Mongo\\dotnet_mongo_angular\\Domain\\Domain.csproj"
+              "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\Domain\\Domain.csproj"
               },
-              "D:\\Mongo\\dotnet_mongo_angular\\Shared\\Shared.csproj": {
-                "projectPath": "D:\\Mongo\\dotnet_mongo_angular\\Shared\\Shared.csproj"
+              "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\Shared\\Shared.csproj": {
+                "projectPath": "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\Shared\\Shared.csproj"
               }
             }
           }
@@ -68,21 +68,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Mongo\\dotnet_mongo_angular\\Domain\\Domain.csproj": {
+    "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Mongo\\dotnet_mongo_angular\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\Mongo\\dotnet_mongo_angular\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "D:\\Mongo\\dotnet_mongo_angular\\Domain\\obj\\",
+        "projectPath": "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -97,8 +97,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Mongo\\dotnet_mongo_angular\\Shared\\Shared.csproj": {
-                "projectPath": "D:\\Mongo\\dotnet_mongo_angular\\Shared\\Shared.csproj"
+              "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\Shared\\Shared.csproj": {
+                "projectPath": "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\Shared\\Shared.csproj"
               }
             }
           }
@@ -143,21 +143,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Mongo\\dotnet_mongo_angular\\Infrastructure\\Infrastructure.csproj": {
+    "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Mongo\\dotnet_mongo_angular\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "D:\\Mongo\\dotnet_mongo_angular\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "D:\\Mongo\\dotnet_mongo_angular\\Infrastructure\\obj\\",
+        "projectPath": "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -172,14 +172,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Mongo\\dotnet_mongo_angular\\Application\\Application.csproj": {
-                "projectPath": "D:\\Mongo\\dotnet_mongo_angular\\Application\\Application.csproj"
+              "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\Application\\Application.csproj": {
+                "projectPath": "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\Application\\Application.csproj"
               },
-              "D:\\Mongo\\dotnet_mongo_angular\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\Mongo\\dotnet_mongo_angular\\Domain\\Domain.csproj"
+              "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\Domain\\Domain.csproj"
               },
-              "D:\\Mongo\\dotnet_mongo_angular\\Shared\\Shared.csproj": {
-                "projectPath": "D:\\Mongo\\dotnet_mongo_angular\\Shared\\Shared.csproj"
+              "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\Shared\\Shared.csproj": {
+                "projectPath": "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\Shared\\Shared.csproj"
               }
             }
           }
@@ -252,21 +252,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Mongo\\dotnet_mongo_angular\\Shared\\Shared.csproj": {
+    "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\Shared\\Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Mongo\\dotnet_mongo_angular\\Shared\\Shared.csproj",
+        "projectUniqueName": "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\Shared\\Shared.csproj",
         "projectName": "Shared",
-        "projectPath": "D:\\Mongo\\dotnet_mongo_angular\\Shared\\Shared.csproj",
-        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "D:\\Mongo\\dotnet_mongo_angular\\Shared\\obj\\",
+        "projectPath": "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\Shared\\Shared.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -313,7 +313,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

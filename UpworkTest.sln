@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UpworkTest", "UpworkTest\UpworkTest.csproj", "{A176EBF6-3B3D-499D-85EE-F39F17526A4A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{3EFB60AB-9DDE-41DF-8B38-40B02C111922}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{99494984-D5D3-497A-8BFF-0335B0D665F4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{C21884A8-E22D-4327-8416-3F1069001312}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csproj", "{17B75724-F2BD-4A64-B98E-C785BFBA0E16}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UpworkTest.Core", "UpworkTest.Core\UpworkTest.Core.csproj", "{72A93944-148B-489D-8FA3-99CC5E2FAABC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryStringEvaluator", "BinaryStringEvaluator\BinaryStringEvaluator.csproj", "{18E5E8B7-09D0-4F63-BFCC-DB5FA7553819}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A176EBF6-3B3D-499D-85EE-F39F17526A4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A176EBF6-3B3D-499D-85EE-F39F17526A4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A176EBF6-3B3D-499D-85EE-F39F17526A4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A176EBF6-3B3D-499D-85EE-F39F17526A4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EFB60AB-9DDE-41DF-8B38-40B02C111922}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EFB60AB-9DDE-41DF-8B38-40B02C111922}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EFB60AB-9DDE-41DF-8B38-40B02C111922}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EFB60AB-9DDE-41DF-8B38-40B02C111922}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99494984-D5D3-497A-8BFF-0335B0D665F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99494984-D5D3-497A-8BFF-0335B0D665F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99494984-D5D3-497A-8BFF-0335B0D665F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99494984-D5D3-497A-8BFF-0335B0D665F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C21884A8-E22D-4327-8416-3F1069001312}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C21884A8-E22D-4327-8416-3F1069001312}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C21884A8-E22D-4327-8416-3F1069001312}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C21884A8-E22D-4327-8416-3F1069001312}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17B75724-F2BD-4A64-B98E-C785BFBA0E16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17B75724-F2BD-4A64-B98E-C785BFBA0E16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17B75724-F2BD-4A64-B98E-C785BFBA0E16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17B75724-F2BD-4A64-B98E-C785BFBA0E16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72A93944-148B-489D-8FA3-99CC5E2FAABC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72A93944-148B-489D-8FA3-99CC5E2FAABC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72A93944-148B-489D-8FA3-99CC5E2FAABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72A93944-148B-489D-8FA3-99CC5E2FAABC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18E5E8B7-09D0-4F63-BFCC-DB5FA7553819}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18E5E8B7-09D0-4F63-BFCC-DB5FA7553819}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18E5E8B7-09D0-4F63-BFCC-DB5FA7553819}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18E5E8B7-09D0-4F63-BFCC-DB5FA7553819}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AAB78C4A-E275-404F-B9C1-7432137198F3}
+	EndGlobalSection
+EndGlobal

@@ -1,15 +1,16 @@
 ﻿using Application.DataTransferObjects;
-using Domain.User;
 using Survey.Api.Application.Common.Interfaces;
 
 namespace Application.IUser
 {
     public interface IUserService : ITransientService
     {
-        Task<List<UsersDTO>> GetAllUsersAsync();
-        Task<UsersDTO?> GetUserByIdAsync(string id);
-        Task<string> AddUserAsync(UsersDTO newUser);
-        Task<string> EditUserAsync(UsersDTO updatedUser);
-        Task DeleteUserAsync(string userToDelete);
+        #region Methods
+        Task<List<UsersDTO>> GetAllAsync();
+        Task<UsersDTO?> GetIdAsync(string id);
+        Task<string> AddAsync(UsersDTO newUser);
+        Task<string> EditAsync(UsersDTO updatedUser);
+        Task DeleteAsync(string userToDelete);
+        #endregion
     }
 }

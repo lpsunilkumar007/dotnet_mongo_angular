@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UpworkTest.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ea7cafc14a46f11114ca79bf7d3ca2ef19469073")]
 [assembly: System.Reflection.AssemblyProductAttribute("UpworkTest.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UpworkTest.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -26,7 +26,7 @@ namespace Infrastructure.WorkerBackgroundService
                     {
                         IUserDataAccessService scopedProcessingService =
                             scope.ServiceProvider.GetRequiredService<IUserDataAccessService>();
-                        var result = await scopedProcessingService.RemoveConsentedUserData(stoppingToken);
+                        var result = await scopedProcessingService.RemoveOldUserData(stoppingToken); // Remove Old User Data
                         if (result)
                         {
                             _logger.LogInformation("Database operation completed successfully at: {time}", DateTimeOffset.Now);
@@ -41,12 +41,14 @@ namespace Infrastructure.WorkerBackgroundService
                 {
                     _logger.LogError(ex, "An error occurred while accessing the database at: {time}", DateTimeOffset.Now);
                 }
+                #region Check Mid Night
                 var now = DateTime.Now;
                 var hours = 23 - now.Hour;
                 var minutes = 59 - now.Minute;
                 var seconds = 59 - now.Second;
                 var secondsTillMidnight = hours * 3600 + minutes * 60 + seconds;
-                await Task.Delay(TimeSpan.FromSeconds(secondsTillMidnight), stoppingToken);
+                #endregion
+                await Task.Delay(TimeSpan.FromSeconds(secondsTillMidnight), stoppingToken); //Run Mid Night
             }
         }
     }

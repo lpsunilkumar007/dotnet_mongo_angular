@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Arun\\WorkPlace\\Dan Storbaek\\SecurePrivacy\\SecurePrivacy_api\\UpworkTest.Core\\UpworkTest.Core.csproj",
+      "projectUniqueName": "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\UpworkTest.Core\\UpworkTest.Core.csproj",
       "projectName": "UpworkTest.Core",
-      "projectPath": "D:\\Arun\\WorkPlace\\Dan Storbaek\\SecurePrivacy\\SecurePrivacy_api\\UpworkTest.Core\\UpworkTest.Core.csproj",
+      "projectPath": "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\UpworkTest.Core\\UpworkTest.Core.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\Arun\\WorkPlace\\Dan Storbaek\\SecurePrivacy\\SecurePrivacy_api\\UpworkTest.Core\\obj\\",
+      "outputPath": "D:\\Arun\\WorkPlace\\Dan Storbaek\\github repo\\SecurePrivacy\\UpworkTest.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

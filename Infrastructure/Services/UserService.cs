@@ -1,7 +1,6 @@
 using Application.DataTransferObjects;
 using Application.IUser;
 using Domain.User;
-using Domain.UserData;
 using Infrastructure.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 using MongoDB.Bson;
@@ -11,13 +10,22 @@ namespace Infrastructure.Services
 {
     public class UsersService : IUserService
     {
+        #region AppDbContext
         private readonly ApplicationDbContext _users;
+        #endregion
+        #region Constructor
         public UsersService(ApplicationDbContext user)
         {
             _users = user;
         }
-
-        public async Task<string> AddUserAsync(UsersDTO newUser)
+        #endregion
+        #region Methods
+        /// <summary>
+        /// Add User Async
+        /// </summary>
+        /// <param name="newUser"></param>
+        /// <returns></returns>
+        public async Task<string> AddAsync(UsersDTO newUser)
         {            
             Users user = new();
             user.Id = ObjectId.GenerateNewId().ToString();
@@ -31,8 +39,13 @@ namespace Infrastructure.Services
 
             return user.Id;
         }
-
-        public async Task DeleteUserAsync(string userToDelete)
+        /// <summary>
+        /// Delete User Async
+        /// </summary>
+        /// <param name="userToDelete"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException"></exception>
+        public async Task DeleteAsync(string userToDelete)
         {
             var reservationToDelete = await _users.Users.FirstOrDefaultAsync(b => b.Id == userToDelete);
 
@@ -47,13 +60,22 @@ namespace Infrastructure.Services
             }
         }
 
-        public async Task<string> EditUserAsync(UsersDTO updatedUser)
+        /// <summary>
+        /// Edit User Async
+        /// </summary>
+        /// <param name="updatedUser"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException"></exception>
+        public async Task<string> EditAsync(UsersDTO updatedUser)
         {
             var userToUpdate = await _users.Users.FirstOrDefaultAsync(b => b.Id == updatedUser.Id);
 
             if (userToUpdate != null)
             {
-                userToUpdate.Update(updatedUser.FirstName, updatedUser.Email, updatedUser.LastName, updatedUser.MobileNumber);
+                userToUpdate.MobileNumber = updatedUser.MobileNumber;
+                userToUpdate.Email = updatedUser.Email;
+                userToUpdate.LastName = updatedUser.LastName;
+                userToUpdate.FirstName = updatedUser.FirstName;                               
                 _users.Users.Update(userToUpdate);
                 await _users.SaveChangesAsync();
             }
@@ -64,7 +86,11 @@ namespace Infrastructure.Services
             return updatedUser.Id;
         }
 
-        public async Task<List<UsersDTO>> GetAllUsersAsync()
+        /// <summary>
+        /// Get All Users Async
+        /// </summary>
+        /// <returns></returns>
+        public async Task<List<UsersDTO>> GetAllAsync()
         {
             var users = await _users.Users.OrderBy(c => c.FirstName).AsNoTracking().Select(x => new UsersDTO
             {
@@ -77,7 +103,12 @@ namespace Infrastructure.Services
             return users;
         }
 
-        public async Task<UsersDTO> GetUserByIdAsync(string id)
+        /// <summary>
+        /// Get User By Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public async Task<UsersDTO> GetIdAsync(string id)
         {
             var data = await _users.Users.AsNoTracking().FirstOrDefaultAsync(b => b.Id == id);
             UsersDTO userDto = new UsersDTO();
@@ -88,5 +119,6 @@ namespace Infrastructure.Services
             userDto.Email = data.Email;
             return userDto;
         }
+        #endregion
     }
 }

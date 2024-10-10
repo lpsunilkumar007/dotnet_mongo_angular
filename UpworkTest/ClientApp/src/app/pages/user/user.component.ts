@@ -39,6 +39,7 @@ export class UserComponent implements OnInit {
     email: '',
     mobileNumber: '',
     remainingDays: 0,
+    isRequestedToDelete: false
   };
   newUserMarkedForDelete: User = {
     id: '',
@@ -47,6 +48,7 @@ export class UserComponent implements OnInit {
     email: '',
     mobileNumber: '',
     remainingDays: 0,
+    isRequestedToDelete: false
   };
   isEditing = false;
   showConfirmModal = false;
@@ -88,6 +90,7 @@ export class UserComponent implements OnInit {
       email: '',
       mobileNumber: '',
       remainingDays: 0,
+      isRequestedToDelete: false
     };
     this.isEditing = false;
   }
@@ -98,9 +101,12 @@ export class UserComponent implements OnInit {
     } else {
       this.store.dispatch(createUser({ user: this.newUser }));
     }
+ 
+    // Add a delay of 1 second (1000 milliseconds) before fetching users
     setTimeout(() => {
       this.store.dispatch(fetchUsers());
-    }, 500);
+    }, 1000); // Change the delay time as needed
+ 
     this.closeModal();
   }
 
@@ -110,6 +116,9 @@ export class UserComponent implements OnInit {
   }
   markForDelete() {
     this.store.dispatch(deleteUserData({ user: this.newUserMarkedForDelete }));
+    setTimeout(() => {
+      this.store.dispatch(fetchUsers());
+    }, 1000); 
     this.isOpenConfirmation = false;
   }
 

@@ -5,4 +5,5 @@ export interface User {
   email: string;
   mobileNumber: string;
   remainingDays: number;
+  isRequestedToDelete:boolean;
 }
