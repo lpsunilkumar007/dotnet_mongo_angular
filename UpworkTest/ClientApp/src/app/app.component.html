@@ -179,6 +179,14 @@
 
 <main class="main">
   <div class="content"></div>
+  <div *ngIf="isAuthenticated">
+    <button
+      (click)="logout()"
+      class="absolute top-4 right-4 bg-red-500 text-white py-2 px-4 rounded"
+    >
+      Logout
+    </button>
+  </div>
 </main>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->

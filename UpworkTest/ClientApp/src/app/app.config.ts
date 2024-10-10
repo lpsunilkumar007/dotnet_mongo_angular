@@ -6,17 +6,20 @@ import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
 import { provideStore } from '@ngrx/store';
 import { userReducer } from './store/user/user.reducer';
-import { authReducer } from './store/auth/auth.reducer'; // Import authReducer
+import { authReducer } from './store/auth/auth.reducer';
 import { provideHttpClient } from '@angular/common/http';
+import { provideEffects } from '@ngrx/effects';
+import { UserEffects } from './store/user/user.effects';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
     provideClientHydration(),
     provideHttpClient(),
-    provideStore({ 
+    provideStore({
       user: userReducer,
-      auth: authReducer // Register the auth reducer
+      auth: authReducer,
     }),
+    provideEffects([UserEffects]),
   ],
 };

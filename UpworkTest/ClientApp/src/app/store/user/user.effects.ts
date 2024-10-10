@@ -25,15 +25,25 @@ import { UserDataAccessService } from '../../core/services/user-data-access/user
 
 @Injectable()
 export class UserEffects {
-  constructor(private actions$: Actions, private userService: UserService,private userDataAccess : UserDataAccessService) {}
+  constructor(
+    private actions$: Actions,
+    private userService: UserService,
+    private userDataAccess: UserDataAccessService
+  ) {}
 
   fetchUsers$ = createEffect(() =>
     this.actions$.pipe(
       ofType(fetchUsers),
       mergeMap(() =>
         this.userService.fetchUsers().pipe(
-          map(users => fetchUsersSuccess({ users })),
-          catchError(error => of(fetchUsersFailure({ error: error.message })))
+          map((users) => {
+            console.log('Fetched users:', users);
+            return fetchUsersSuccess({ users });
+          }),
+          catchError((error) => {
+            console.log('Error fetching users:', error.message);
+            return of(fetchUsersFailure({ error: error.message }));
+          })
         )
       )
     )
@@ -44,8 +54,8 @@ export class UserEffects {
       ofType(createUser),
       mergeMap(({ user }) =>
         this.userService.createUser(user).pipe(
-          map(newUser => createUserSuccess({ user: newUser })),
-          catchError(error => of(createUserFailure({ error: error.message })))
+          map((newUser) => createUserSuccess({ user: newUser })),
+          catchError((error) => of(createUserFailure({ error: error.message })))
         )
       )
     )
@@ -56,8 +66,8 @@ export class UserEffects {
       ofType(updateUser),
       mergeMap(({ user }) =>
         this.userService.updateUser(user).pipe(
-          map(updatedUser => updateUserSuccess({ user: updatedUser })),
-          catchError(error => of(updateUserFailure({ error: error.message })))
+          map((updatedUser) => updateUserSuccess({ user: updatedUser })),
+          catchError((error) => of(updateUserFailure({ error: error.message })))
         )
       )
     )
@@ -69,7 +79,7 @@ export class UserEffects {
       mergeMap(({ userId }) =>
         this.userService.deleteUser(userId).pipe(
           map(() => deleteUserSuccess({ userId })),
-          catchError(error => of(deleteUserFailure({ error: error.message })))
+          catchError((error) => of(deleteUserFailure({ error: error.message })))
         )
       )
     )
@@ -80,7 +90,9 @@ export class UserEffects {
       mergeMap(({ user }) =>
         this.userDataAccess.markForDelete(user).pipe(
           map(() => deleteUserDataSuccess({ user })),
-          catchError(error => of(deleteUserDataFailure({ error: error.message })))
+          catchError((error) =>
+            of(deleteUserDataFailure({ error: error.message }))
+          )
         )
       )
     )

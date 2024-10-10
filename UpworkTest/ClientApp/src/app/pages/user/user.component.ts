@@ -98,6 +98,9 @@ export class UserComponent implements OnInit {
     } else {
       this.store.dispatch(createUser({ user: this.newUser }));
     }
+    setTimeout(() => {
+      this.store.dispatch(fetchUsers());
+    }, 500);
     this.closeModal();
   }
 

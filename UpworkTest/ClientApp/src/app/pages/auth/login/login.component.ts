@@ -39,6 +39,7 @@ export class LoginComponent {
         this.store.dispatch(
           AuthActions.setAuthenticated({ isAuthenticated: true })
         );
+        localStorage.setItem('isAuthenticated', 'true');
         this.router.navigate(['/user']);
       } else {
         this.errorMessage = 'Incorrect email or password';

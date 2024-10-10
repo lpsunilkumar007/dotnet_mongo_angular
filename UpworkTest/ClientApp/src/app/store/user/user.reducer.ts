@@ -10,13 +10,19 @@ export const initialState: UserState = {
 
 export const userReducer = createReducer(
   initialState,
-  on(UserActions.fetchUsers, (state) => ({ ...state, loading: true })),
-  on(UserActions.fetchUsersSuccess, (state, { users }) => ({
-    ...state,
-    users,
-    loading: false,
-    error: null,
-  })),
+  on(UserActions.fetchUsers, (state) => {
+    console.log('fetchUsers action dispatched'); // Debugging log
+    return { ...state, loading: true };
+  }),
+  on(UserActions.fetchUsersSuccess, (state, { users }) => {
+    console.log('fetchUsersSuccess action dispatched', users); // Debugging log
+    return {
+      ...state,
+      users,
+      loading: false,
+      error: null,
+    };
+  }),
   on(UserActions.fetchUsersFailure, (state, { error }) => ({
     ...state,
     loading: false,
