@@ -25,12 +25,13 @@ import {
 } from '../../store/user/user.selectors';
 import { UserDataAccessService } from '../../core/services/user-data-access/user-data-access.service';
 import * as AuthActions from '../../store/auth/auth.actions';
-import { Router } from '@angular/router';
+import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { faL } from '@fortawesome/free-solid-svg-icons';
+import { BrowserModule } from '@angular/platform-browser';
 @Component({
   selector: 'app-user',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule,  RouterModule, RouterOutlet],
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css'],
 })

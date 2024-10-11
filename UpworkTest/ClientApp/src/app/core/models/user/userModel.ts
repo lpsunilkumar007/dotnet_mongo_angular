@@ -8,3 +8,14 @@ export interface User {
   isRequestedToDelete:boolean;
   isDeleted:boolean;
 }
+
+export interface UserCompound { 
+  firstName: string;
+  lastName: string;  
+  email: string;
+  mobileNumber: string;
+}
+export interface UserCompoundRequest { 
+  firstName: string;
+  lastName: string; 
+}

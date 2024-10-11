@@ -14,3 +14,8 @@
 .rounded-custom {
     border-radius: 0.25rem;
 }
+
+.active-class {
+    color: #000000;
+    font-weight: bold;
+  } 

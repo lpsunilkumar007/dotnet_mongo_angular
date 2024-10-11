@@ -13,7 +13,8 @@ namespace Infrastructure
             return services
                 .AddPersistence(config)
                 .AddServices()
-                .AddBackGroundService();                
+                .AddBackGroundService()
+                .AddMongoDBService(config);
         }
     }
 }
